@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-image: url('../images/tokyo_background.png');
+    background-image: url('../images/tokyo_background.webp');
     background-color: rgb(177 123 123 / 33%);
     background-blend-mode: lighten;
     background-size: cover;
@@ -126,6 +126,8 @@ button.accordion-header span {
 
 .reprezentant-container {
     transition: all 0.15s ease-in-out;
+    position: relative;
+    cursor: pointer;
 }
 
 .reprezentant-container:hover {
@@ -143,10 +145,23 @@ button.accordion-header span {
 
 img.reprezentant {
     width: 80%;
+    margin: 0 auto;
+}
+
+.link-to-profile {
+    position: absolute;
+    width: calc(80% - 2.5rem);
+    text-align: right;
+    top: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
     img.reprezentant {
         width: 60%;
+    }
+    .link-to-profile {
+        width: calc(60% - 2rem);
+        text-align: right;
+        top: 1.5rem;
     }
 }
