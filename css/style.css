@@ -69,9 +69,37 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
+.main-title {
+    font-size: 1.85rem;
+}
+
+.event-start-info {
+    font-size: 0.7rem;
+}
+
 .status-box {
     min-width: 80px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.1 !important;
+    font-size: 0.8rem !important;
+    width: fit-content;
+}
+
+.status-box.status-box-small {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .status-box.status-box-normal {
+        display: none;
+    }
+    .status-box.status-box-small {
+        display: block;
+    }
+}
+
+.time-value.event {
+    font-size: 0.8rem;
 }
 
 .live_event {
@@ -89,12 +117,36 @@ body {
 .time-value {
     font-family: "Roboto", sans-serif;
     font-weight: 800;
+    font-size: 1.35rem;
 }
 
 button.accordion-header span {
     text-align: left;
 }
 
+.reprezentant-container {
+    transition: all 0.15s ease-in-out;
+}
+
+.reprezentant-container:hover {
+    transform: scale(1.005);
+}
+
+.reprezentant-container img.reprezentant {
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0);
+}
+
+.reprezentant-container:hover img.reprezentant {
+    box-shadow: 0 8px 16px rgb(107 28 28 / 20%);
+}
+
 img.reprezentant {
     width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    img.reprezentant {
+        width: 60%;
+    }
 }

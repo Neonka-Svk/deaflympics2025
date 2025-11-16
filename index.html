@@ -24,7 +24,7 @@
 	<div class="p-4 md:p-8 min-h-screen flex flex-col items-center main-container">
 		
 	<header class="w-full max-w-4xl p-4 mb-2 text-center">
-		<h1 class="text-6xl font-extrabold text-white text-shadow-lg drop-shadow-lg japan-font">
+		<h1 class="lg:text-6xl md:text-4xl sm:text-3xl font-extrabold text-white text-shadow-lg drop-shadow-lg japan-font main-title">
 			<span style="color: var(--color-primary);">TOKYO 2025 DEAFLYMPICS</span>
 		</h1>
 	</header>
@@ -32,15 +32,15 @@
 	<section class="w-full max-w-5xl p-6 mb-8 rounded-xl frosted-glass text-white shadow-xl">
 		<h2 class="text-3xl mb-5 title japan-font text-center" style="color: var(--color-accent);">Naši cyklisti</h2>
 		<p class="text-gray-100 font-bold text-center">Sleduj online našich cyklistov a vyjadri im podporu na ich ceste za úspechom! 🥇🏆</p>
-		<div class="grid grid-cols-1 md:grid-cols-2">
-			<div class="bg-opacity-30 p-4 rounded-lg flex flex-col items-center">
-				<img class="rounded-lg mb-4 object-cover reprezentant ml-4" src="./images/terezka.jpg" alt="Tereza Birošová">
+		<div class="grid grid-cols-1 md:grid-cols-2 ml-8 mr-8">
+			<div class="bg-opacity-30 p-4 rounded-lg flex flex-col items-center reprezentant-container">
+				<img class="rounded-lg mb-4 object-cover reprezentant" src="./images/terezka.jpg" alt="Tereza Birošová">
 				<div class="mt-[-2rem] bg-gray-100 px-2 rounded-md shadow-md ">
 					<h3 class="text-xl font-semibold text-gray-700">Tereza Birošová</h3>
 				</div>
 			</div>
-			<div class="bg-opacity-30 p-4 rounded-lg flex flex-col items-center">
-				<img class="rounded-lg mb-4 object-cover reprezentant mr-4" src="./images/julo.jpg" alt="Július Maťovčík">
+			<div class="bg-opacity-30 p-4 rounded-lg flex flex-col items-center reprezentant-container">
+				<img class="rounded-lg mb-4 object-cover reprezentant" src="./images/julo.jpg" alt="Július Maťovčík">
 				<div class="mt-[-2rem] bg-gray-100 px-2 rounded-md shadow-md ">
 					<h3 class="text-xl font-semibold text-gray-700">Július Maťovčík</h3>
 				</div>
@@ -61,7 +61,7 @@
 						<span id="japan-date" class="text-sm text-gray-100"></span>
 					</div>
 				</div>
-				<span id="japan-time" class="text-3xl time-value" style="color: var(--color-accent);">00:00:00</span>
+				<span id="japan-time" class="lg:text-3xl md:text-2xl sm:text-xl time-value" style="color: var(--color-accent);">00:00:00</span>
 			</div>
 			
 			<div class="bg-opacity-30 p-4 rounded-lg flex items-center justify-between times">
@@ -72,7 +72,7 @@
 						<span id="slovakia-date" class="text-sm text-gray-100"></span>
 					</div>
 				</div>
-				<span id="slovakia-time" class="text-3xl time-value" style="color: var(--color-accent);">00:00:00</span>
+				<span id="slovakia-time" class="lg:text-3xl md:text-2xl sm:text-xl time-value" style="color: var(--color-accent);">00:00:00</span>
 			</div>
 		</div>
 	</section>
@@ -84,25 +84,28 @@
 			<div id="event-1" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-17T09:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Šprint (M/Ž)</span>
+					<div class="text-left">
+						<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Šprint (M/Ž)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 17, 09:00 (Japonsko) / Nov. 17, 01:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 17, 09:00 (Japonsko) / Nov. 17, 01:00 (Slovensko)</span>
-						</div>
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/gDnW5W4Z3XM&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -110,25 +113,29 @@
 			<div id="event-2" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-18T13:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Kritérium (Ž)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Kritérium (Ž)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 18, 13:00 (Japonsko) / Nov. 18, 05:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 18, 13:00 (Japonsko) / Nov. 18, 05:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/n7mk9HimuWM&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -136,25 +143,29 @@
 			<div id="event-3" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-18T14:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Kritérium (M)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Kritérium (M)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 18, 14:00 (Japonsko) / Nov. 18, 06:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 18, 14:00 (Japonsko) / Nov. 18, 06:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/n7mk9HimuWM&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -162,25 +173,29 @@
 			<div id="event-4" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-20T09:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Časovka (M)</span>
+					<div class="text-left">	
+					<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Časovka (M)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 20, 09:00 (Japonsko) / Nov. 20, 01:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 20, 09:00 (Japonsko) / Nov. 20, 01:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/TG5CjD89wNg&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -188,25 +203,29 @@
 			<div id="event-5" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-20T13:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Časovka (Ž)</span>
+					<div class="text-left">	
+					<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Časovka (Ž)</span>
+					<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 20, 13:00 (Japonsko) / Nov. 20, 05:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 20, 13:00 (Japonsko) / Nov. 20, 05:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/TG5CjD89wNg&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -214,25 +233,29 @@
 			<div id="event-6" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-22T09:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Hlavné preteky (M)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Hlavné preteky (M)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 22, 09:00 (Japonsko) / Nov. 22, 01:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 22, 09:00 (Japonsko) / Nov. 22, 01:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/uoyWc__1JWk&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -240,25 +263,29 @@
 			<div id="event-7" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-22T13:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Cestná cyklistika - Hlavné preteky (Ž)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Cestná cyklistika - Hlavné preteky (Ž)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 22, 13:00 (Japonsko) / Nov. 22, 05:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 22, 13:00 (Japonsko) / Nov. 22, 05:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
-						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
+						<!-- <div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
-						</div>
-						<!-- <div class="relative aspect-video">
-							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/watch?v=+++++&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div> -->
+						<div class="relative aspect-video">
+							<iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/live/uoyWc__1JWk&autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -266,18 +293,22 @@
 			<div id="event-8" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-24T13:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Horská cyklistika - XCC (Ž)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Horská cyklistika - XCC (Ž)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 24, 13:00 (Japonsko) / Nov. 24, 05:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 24, 13:00 (Japonsko) / Nov. 24, 05:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
 						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
@@ -292,18 +323,22 @@
 			<div id="event-9" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-24T14:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Horská cyklistika - XCC (M)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Horská cyklistika - XCC (M)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 24, 14:00 (Japonsko) / Nov. 24, 06:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 24, 14:00 (Japonsko) / Nov. 24, 06:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
 						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
@@ -318,18 +353,22 @@
 			<div id="event-10" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-25T09:00:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Horská cyklistika - XCO (Ž)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Horská cyklistika - XCO (Ž)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 25, 09:00 (Japonsko) / Nov. 25, 01:00 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 25, 09:00 (Japonsko) / Nov. 25, 01:00 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
 						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.
@@ -344,18 +383,22 @@
 			<div id="event-11" class="accordion-item bg-white bg-opacity-20 rounded-lg overflow-hidden transition-all duration-300" 
 				data-event-date="2025-11-25T11:15:00+09:00" data-is-live="false">
 				<button class="accordion-header w-full flex items-center justify-between p-4 focus:outline-none text-white hover:bg-white hover:bg-opacity-30 transition duration-150">
-					<span class="text-lg font-semibold">Horská cyklistika - XCO (M)</span>
+					<div class="text-left">	
+						<span class="lg:text-lg sm:text-base font-semibold">Horská cyklistika - XCO (M)</span>
+						<div class="text-white event-start-info">
+							<span class="font-regular">Štart: Nov. 25, 11:15 (Japonsko) / Nov. 25, 03:15 (Slovensko)</span>
+						</div>
+						<div class="status-box status-box-small text-sm mt-2 font-bold px-3 py-1 rounded-full text-white"></div>
+					</div>
 					<div class="flex items-center space-x-3">
-						<div class="status-box text-sm font-bold px-3 py-1 rounded-full text-white"></div>
+						<div class="status-box status-box-normal text-sm font-bold px-3 py-1 rounded-full text-white"></div>
 						<svg class="w-6 h-6 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
 					</div>
 				</button>
 				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
 					<div class="p-4 bg-gray-900 bg-opacity-30 border-t border-white border-opacity-10">
 						<!-- <h3 class="text-xl font-bold text-white mb-2">Tokyo Deaflympics Grand Opening</h3> -->
-						<div class="mb-3 text-sm text-gray-100">
-							<span class="font-bold">Čas udalosti: Nov. 25, 11:15 (Japonsko) / Nov. 25, 03:15 (Slovensko)</span>
-						</div>
+						
 						<!-- <p class="text-gray-300 mb-3">Witness the start of the games live from the Olympic Stadium in Tokyo. Don't miss the cultural performances and the lighting of the flame!</p> -->
 						<div class="text-center p-3 mb-4 rounded-lg bg-gray-400 font-bold bg-opacity-50 text-white">
 							Zatiaľ nebolo zverejnené žiadne živé vysielanie k tejto udalosti. Ďakujem za pochopenie.

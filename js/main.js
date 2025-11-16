@@ -90,8 +90,8 @@ function getEventStatus(eventISODate) {
 
         const pad = (num) => String(num).padStart(2, '0');
 
-        timerText = days > 0 ? `Ostáva: <span class="time-value">${pad(days)}:</span>` : 'Ostáva: ';
-        timerText += `<span class="time-value">${pad(hours)}:${pad(minutes)}:${pad(seconds)}</span>`;
+        timerText = days > 0 ? `Ostáva: <span class="time-value event">${pad(days)}:</span>` : 'Ostáva: ';
+        timerText += `<span class="time-value event">${pad(hours)}:${pad(minutes)}:${pad(seconds)}</span>`;
     }
     
     return { status, timerText };
@@ -106,10 +106,10 @@ function updateAccordionHeaders() {
 
     document.querySelectorAll('.accordion-item').forEach(item => {
         const eventDate = item.dataset.eventDate;
-        const statusBox = item.querySelector('.status-box');
+        const statusBoxes = item.querySelectorAll('.status-box');
         const eventTime = new Date(eventDate).getTime();
         
-        if (!eventDate || !statusBox) return;
+        if (!eventDate || !statusBoxes) return;
 
         const { status, timerText } = getEventStatus(eventDate);
         
@@ -129,27 +129,29 @@ function updateAccordionHeaders() {
             firstLiveEventItem = item;
         }
 
-        // --- UI Update ---
-        statusBox.innerHTML = status === 'passed' ? 'Už prebehlo' : (status === 'live' ? 'Naživo' : timerText);
+        // --- UI Update: Loop through ALL found status boxes ---
+        statusBoxes.forEach(statusBox => {
+            statusBox.innerHTML = status === 'passed' ? 'Už prebehlo' : (status === 'live' ? 'Naživo' : timerText);
 
-        // Reset classes
-        statusBox.classList.remove('live_event', 'upcoming_event', 'passed_event');
+            // Reset classes
+            statusBox.classList.remove('live_event', 'upcoming_event', 'passed_event');
 
-        if (status === 'live') {
-            statusBox.classList.add('live_event');
-            // Update the main countdown section to show LIVE text if it exists
-            const countdownElement = document.getElementById(`countdown-${eventDate.replace(/[^a-zA-Z0-9]/g, '-')}`);
-            if (countdownElement) {
-                countdownElement.innerHTML = "Naživo!";
+            if (status === 'live') {
+                statusBox.classList.add('live_event');
+            } else if (status === 'passed') {
+                statusBox.classList.add('passed_event');
+            } else {
+                statusBox.classList.add('upcoming_event');
             }
-        } else if (status === 'passed') {
-            statusBox.classList.add('passed_event');
-        } else {
-            statusBox.classList.add('upcoming_event');
-            // Update the main countdown section with the timer text
-            const countdownElement = document.getElementById(`countdown-${eventDate.replace(/[^a-zA-Z0-9]/g, '-')}`);
-            if (countdownElement) {
-                    countdownElement.innerHTML = timerText;
+        });
+
+        // Update the main countdown section separately (this is usually a single element outside the header)
+        const countdownElement = document.getElementById(`countdown-${eventDate.replace(/[^a-zA-Z0-9]/g, '-')}`);
+        if (countdownElement) {
+            if (status === 'live') {
+                countdownElement.innerHTML = "Naživo!";
+            } else if (status === 'upcoming') {
+                countdownElement.innerHTML = timerText;
             }
         }
     });
