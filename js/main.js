@@ -1,10 +1,10 @@
 // --- Configuration ---
 const TOKYO_TIMEZONE = 'Asia/Tokyo';
 const BRATISLAVA_TIMEZONE = 'Europe/Bratislava';
-// 3 minutes buffer before actual start (Upcoming -> Live)
-const LIVE_THRESHOLD_MS = 3 * 60 * 1000; 
-// 6 hours duration after the event start time (Live -> Passed)
-const LIVE_DURATION_MS = 6 * 60 * 60 * 1000; 
+// 5 minutes buffer before actual start (Upcoming -> Live)
+const LIVE_THRESHOLD_MS = 5 * 60 * 1000; 
+// 8 hours duration after the event start time (Live -> Passed)
+const LIVE_DURATION_MS = 8 * 60 * 60 * 1000; 
 
 // --- Time Formatting Functions ---
 

@@ -1,5 +1,5 @@
 :root {
-    --color-primary: #b4293c; /*#c32e42; */
+    --color-primary: #ac303d; /*#c32e42; */
     --color-secondary: #fce4ec;
     --color-accent: #f1f1f1;
 }
@@ -107,7 +107,7 @@ body {
 }
 
 .upcoming_event {
-    background-color: #e18f0be8;
+    background-color: #4f7bc7e8;
 } 
 
 .passed_event {
@@ -131,7 +131,7 @@ button.accordion-header span {
 }
 
 .reprezentant-container:hover {
-    transform: scale(1.005);
+    transform: scale(1.01);
 }
 
 .reprezentant-container img.reprezentant {
