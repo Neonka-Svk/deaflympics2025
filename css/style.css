@@ -1,0 +1,100 @@
+:root {
+    --color-primary: #c32e42; 
+    --color-secondary: #fce4ec;
+    --color-accent: #f1f1f1;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../images/tokyo_background.png');
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    color: #1a202c;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.japan-font {
+    font-family: 'Amanojaku', sans-serif;
+    z-index: 10;
+}
+
+.frosted-glass {
+    background-color: rgb(203 155 155 / 44%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flags {
+    width: 32px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.custom-scroll::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: rgba(90, 89, 89, 0.4);
+    border-radius: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.times, .accordion-item button {
+    transition: all 0.15s ease-in-out;
+    background-color: #ad354575;
+}
+
+.times:hover, .accordion-item:hover button, .accordion-item.active button {
+    background-color: #a527277a;
+}
+
+.main-container {
+    z-index: 10;
+}
+
+.title {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.status-box {
+    min-width: 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.live_event {
+    background-color: #48a531e8;
+}
+
+.upcoming_event {
+    background-color: #e18f0be8;
+} 
+
+.passed_event {
+    background-color: #7e8084e8;
+}
+
+.time-value {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+}
+
+button.accordion-header span {
+    text-align: left;
+}
+
+img.reprezentant {
+    width: 80%;
+}
