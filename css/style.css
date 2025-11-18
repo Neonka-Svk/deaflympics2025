@@ -155,6 +155,15 @@ img.reprezentant {
     top: 1.5rem;
 }
 
+a {
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
 @media screen and (max-width: 768px) {
     img.reprezentant {
         width: 60%;
